@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+  </head>
+
+  <style>
+    .transition {
+      height: 500px;
+      width: 1000px;
+      border: 1px solid;
+    }
+
+    img {
+      transition: transform 1s ease-out;
+      position: relative;
+      top: 50px;
+    }
+
+    .transition:hover .bat {
+      transform: rotate(-60deg);
+      transform-origin: top right;
+    }
+
+    .ball {
+      height: 50px;
+      width: 50px;
+      background-color: red;
+      border-radius: 50%;
+      position: relative;
+      left: 400px;
+      top: 0px;
+    }
+
+    .transition div {
+      transition: transform 0.7s ease-in-out 1s;
+    }
+
+    .transition:hover .ball {
+      transform: translate(200px, -50px);
+    }
+  </style>
+  <body>
+    <div class="transition">
+      <img
+        class="bat"
+        src="https://www.decathlon.com.bd/pub/media/catalog/product/cache/d73a5018306142840707bd616a4ef293/t/1/t190-adults-intermediate-cricket-bat-orange.jpg"
+        alt=""
+      />
+
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
